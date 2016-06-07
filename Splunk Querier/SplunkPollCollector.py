@@ -11,9 +11,9 @@ import threading
  
 class SplunkPollCollector(object):
                
-                base_url = 'https://loninsplappp1.uk.db.com:8089'
-                username = 'uddinmo'
-                password = 'HussainYasin82'
+                base_url = 'https://splunkserver.com'
+                username = 'username'
+                password = 'password'
                 session_key_timer = 1800
                
                 request = urllib2.Request(base_url + '/servicesNS/%s/search/auth/login' % (username),data = urllib.urlencode({'username': username, 'password': password}))
@@ -23,7 +23,7 @@ class SplunkPollCollector(object):
                 #print(session_key)
  
                 def __init__(self,polling_time):
-                                self.base_url = 'https://loninsplappp1.uk.db.com:8089'
+                                self.base_url = 'SplunkUrl'
                                 self.base_url = SplunkPollCollector.base_url
                                 self.polling_time = polling_time
                                 self.term_signal = False
@@ -384,7 +384,7 @@ class SplunkPollCollectorDE(SplunkPollCollector):
 
                 def __init__(self,polling_time):
 
-                                self.base_url = "https://frainsplappp1.de.db.com:8089"
+                                self.base_url = "https://germanySplunk:8089"
 
                                 self.polling_time = polling_time
 
